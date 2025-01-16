@@ -1,0 +1,365 @@
+/* General Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-style: normal;
+    background-color: #140911;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header-content,
+body h1 {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-size: 40px;
+    color: #F7921D;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #B14622;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Product Section */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-content: baseline;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #2D2A32;
+    justify-content: space-between;
+    width: 160px;
+    max-height: 240px;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.product-image {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-details {
+    text-align: start;
+    padding: 0px 8px;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #E8C547;
+
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.buy-btn {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    background-color: #774936;
+    color: #fff;
+    padding: 8px 16px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.buy-btn:hover {
+    background-color: #A1351F;
+}
+
+/* Home Section */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1800px;
+    max-height: 900px;
+    margin: auto;
+    padding: 24px;
+}
+
+.carousel-slide img {
+    min-width: 100%;
+    height: auto;
+    object-fit: fill;
+}
+
+.carousel-container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    margin-right: 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flexbox;
+    justify-content: center;
+    min-height: 600px;
+    width: 100%;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Hero Banners */
+.hero-banners {
+    display: flex;
+    flex-direction: column;
+    flex: 0.5;
+    gap: 24px;
+}
+
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.hero-banner svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: #ECECEC;
+}
+
+.banner-content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.banner-content h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* The cart config and stuff */
+#cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4b2312;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 38px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(66, 56, 56, 0.74);
+}
+
+#cart-count {
+    background-color: #A1351F;
+    color: white;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 2px 8px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: none;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+}
+
+.cart-item-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #E8C547;
+}
+
+.cart-item-price {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #E74C3C;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.remove-btn i {
+    font-size: 20px;
+}
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #2D2A32;
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+#cart-total {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#checkout-btn {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    background-color: #774936;
+    color: #fff;
+    padding: 8px 16px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+#close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}

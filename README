@@ -1,0 +1,9 @@
+# MOdifications I made for cleaner organization
+
+Instead of the choisir and prix function, I use the addToCart et checkout tp populate the cart array with products and calculate the total amount.The checkout also clears the cart and displays a confirmation message with the total amount. Instead of the table for each product I use a JSON(In the resources)  with the product name, image and price.
+
+# Things I didn't implement but wish that I could
+
+I spent too much time learning to connect the js with the html, and making everything work as it should but I wish I could have made the banners and the carroussel navigate for another thing( maybe adding a filter to the items). I also wish I could play around more with the animations and user experience overall.
+
+I used phosphor icons, fonts awesome and google fonts for styling.

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+        </ul>
+
+        <div id="cart-icon" onclick="toggleCart()">
+            <span id="cart-count">0</span>
+            <i class="ph-bold ph-shopping-cart-simple"></i>
+        </div>
+
+        <div class="logo">ADRIÃO, Luciana</div>
+    </nav>
+
+    <section id="home">
+        <div class=" container">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="https://i.pinimg.com/564x/f8/5e/e0/f85ee0b7bebbebf16751aea7568cddb0.jpg" alt="Slide 1">
+                    <img src="https://i.pinimg.com/564x/e5/da/bf/e5dabfed2df74ec6df1c3e9b495035ec.jpg" alt="Slide 2">
+                </div>
+                <button class="prev-btn" onclick="moveSlide(-1)">❮</button>
+                <button class="next-btn" onclick="moveSlide(1)">❯</button>
+            </div>
+
+            <div class="hero-banners">
+                <div class="hero-banner">
+                    <img src="https://i.pinimg.com/originals/64/f9/9f/64f99ffea2423f785f1a0e1b0c3e42aa.gif"
+                        alt="Banner 1">
+                    <div class="banner-content">
+                        <h2>Special DEALS</h2>
+                        <p>Find deals in summoning products.</p>
+
+                    </div>
+                </div>
+
+                <div class="hero-banner">
+                    <img src="https://i.pinimg.com/originals/22/90/a3/2290a3e13dafab98a00a85ec91a6ed53.gif"
+                        alt="Banner 2">
+
+                    <div class="banner-content">
+                        <h2>Best DEALS in otherwordly fiends</h2>
+                        <p>Find the best fiends.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <h1>Browse Products</h1>
+        <div id="productGrid" class="product-grid"></div>
+
+    </section>
+
+    <div id="cart" class="cart">
+        <button id="close-cart" onclick="toggleCart()">✖</button>
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <div id="cart-total">Total: €0.00</div>
+        <button id="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
